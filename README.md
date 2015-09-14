@@ -13,7 +13,6 @@ $ diskutil eject /dev/disk1
 
 ```
 
-<br>
 ---
 ### Speed up keyboard repetition	
 
@@ -21,7 +20,6 @@ $ diskutil eject /dev/disk1
 ### Define the desired repetition speed => 0 1 2 3 faster=(0)
 `defaults write NSGlobalDomain KeyRepeat -int 0`
 
-<br>
 ---
 ### Fix the "no connected camera" error in your mac
 
@@ -30,7 +28,6 @@ sudo killall VDCAssistant
 sudo killall AppleCameraAssistant
 ```		
 
-<br>
 ---
 ### Encrypt some file with openssl		
 

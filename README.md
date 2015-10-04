@@ -4,7 +4,7 @@
 
 ### Create a _bootable_ usb stick with dd command	
 
-```
+```shell
 $ hdiutil convert -format UDRW -o ~/Desktop/target.img ~/Desktop/ubuntu.iso
 $ diskutil list
 $ diskutil unmountDisk /dev/disk1
@@ -23,7 +23,7 @@ $ diskutil eject /dev/disk1
 ---
 ### Fix the "no connected camera" error in your mac.
 
-```
+```shell
 sudo killall VDCAssistant		
 sudo killall AppleCameraAssistant
 ```		
@@ -56,12 +56,12 @@ You can re-enable **System Integrity Protection** by folowing the above steps, b
 
 Note that if you're running **El Capitan** you'll have to disable **System Integrity Protection** to make the symlink to `/usr/sbin`.	
 
-```
+```shell
 $ sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport 
 $ aiport -s
 ```
 For convenience, you can add an alias to your `.bash_profile` or `.zshrc` like the following.	
 
-```
+```shell
 alias wifiscan='airport -s'
 ```

@@ -39,7 +39,6 @@ sudo killall AppleCameraAssistant
 
 	
 ---		
-
 ### Disable 'System Integrity Protection' on Mac OS X **El Capitan**.	
 
 1. Restart your Mac.
@@ -49,7 +48,20 @@ sudo killall AppleCameraAssistant
 5. Terminal should display a message that SIP was disabled.
 6. From the  menu, select Restart.	
 
-You can re-enable **System Integrity Protection** by folowing the above steps, but using `csrutil enable` instead.
+You can re-enable **System Integrity Protection** by folowing the above steps, but using `csrutil enable` instead.		
 
+		
+---
+### Scan your local wireless environment from the command line. 
 
+Note that if you're running **El Capitan** you'll habe to disable **System Integrity Protection** to make the symlink to `/usr/sbin`.	
 
+```
+$ sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport 
+$ aiport -s
+```
+For convenience, you can add an alias to your `.bash_profile` or `.zshrc` like the following.	
+
+```
+alias wifiscan='airport -s'
+```

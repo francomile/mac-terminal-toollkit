@@ -17,8 +17,10 @@ $ diskutil eject /dev/disk1
 ### Speed up keyboard repetition.	
 
 `defaults write -g ApplePressAndHoldEnabled -bool false`	
-### Define the desired repetition speed => 0 1 2 3 faster=(0).
-`defaults write NSGlobalDomain KeyRepeat -int 0`
+### Define the desired repetition speed => 0 1 2 3 less is faster=(0) Set it really fast:
+`defaults write NSGlobalDomain KeyRepeat -int 0.02`	
+### Set a shirt delay until keypressed => less is faster (don't put it under 7 or you won't be able to write properly):		
+`defaults write NSGlobalDomain InitialKeyRepeat -int 12`
 
 ---
 ### Fix the "no connected camera" error in your mac.
@@ -64,4 +66,21 @@ For convenience, you can add an alias to your `.bash_profile` or `.zshrc` like t
 
 ```shell
 alias wifiscan='airport -s'
-```
+```	
+
+---
+### Increase Window resize speed for Cocoa apps.	
+`defaults write NSGlobalDomain NSWindowResizeTime -float 0.001` 	
+
+---
+### Disable Warning when changing file extension.	
+`defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false`	
+
+---
+### Show hidden `~/Library` folder.
+`chflags nohidden ~/Library`	
+
+### Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"	
+`defaults write com.apple.finder QuitMenuItem -bool true`
+
+ 

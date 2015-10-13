@@ -108,3 +108,21 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 ```shell
 defaults write com.apple.dashboard mcx-disabled -bool true
 ```
+---
+### Don’t display the annoying prompt when quitting iTerm.
+
+```shell
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+```
+
+---
+### Disable the sound effects on boot.
+```shell
+sudo nvram SystemAudioVolume=" "
+```
+
+---
+### Check for software updates daily, not just once per week.
+```shell
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+```

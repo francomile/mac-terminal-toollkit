@@ -19,11 +19,15 @@ $ diskutil eject /dev/disk1
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
-### Define the desired repetition speed => 0 1 2 3 less is faster=(0) Set it really fast:
-`defaults write NSGlobalDomain KeyRepeat -int 0.02`
+##### Define the desired repetition speed => 0 1 2 3 less is faster=(0) Set it really fast:
+```shell
+defaults write NSGlobalDomain KeyRepeat -int 0.02`
+```
 
-### Set a shirt delay until keypressed => less is faster (don't put it under 7 or you won't be able to write properly):		
-`defaults write NSGlobalDomain InitialKeyRepeat -int 12`
+##### Set a short delay until keypressed => less is faster (don't put it under 7 or you won't be able to write properly):
+```shell
+defaults write NSGlobalDomain InitialKeyRepeat -int 12`
+```
 
 ---
 ### Fix the "no connected camera" error in your mac.

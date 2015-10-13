@@ -84,6 +84,7 @@ alias wifiscan='airport -s'
 ### Show hidden `~/Library` folder.
 `chflags nohidden ~/Library`	
 
+---
 ### Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"	
 `defaults write com.apple.finder QuitMenuItem -bool true`
 

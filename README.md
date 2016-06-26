@@ -21,12 +21,12 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 ##### Define the desired repetition speed => 0 1 2 3 less is faster=(0) Set it really fast:
 ```shell
-defaults write NSGlobalDomain KeyRepeat -int 0.02`
+defaults write NSGlobalDomain KeyRepeat -int 0.02
 ```
 
 ##### Set a short delay until keypressed => less is faster (don't put it under 7 or you won't be able to write properly):
 ```shell
-defaults write NSGlobalDomain InitialKeyRepeat -int 12`
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
 ```
 
 ---
@@ -41,12 +41,12 @@ sudo killall AppleCameraAssistant
 ### Encrypt some file with openssl.
 
 ```shell
-openssl enc -aes-256-cbc -salt -in file.txt -out file.txt.enc`
+openssl enc -aes-256-cbc -salt -in file.txt -out file.txt.enc
 ```
 ### Decrypt it back.
 
 ```shell
-openssl enc -aes-256-cbc -d -in file.txt.enc -out file.txt`
+openssl enc -aes-256-cbc -d -in file.txt.enc -out file.txt
 ```
 
 ---		
@@ -80,13 +80,13 @@ alias wifiscan='airport -s'
 ---
 ### Increase Window resize speed for Cocoa apps.
 ```shell
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001` 	
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001 	
 ```
 
 ---
 ### Disable Warning when changing file extension.
 ```shell
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false`
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 ```
 
 ---

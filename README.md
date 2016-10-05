@@ -22,6 +22,8 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 ##### Define the desired repetition speed => 0 1 2 3 less is faster=(0) Set it really fast:
 ```shell
 defaults write NSGlobalDomain KeyRepeat -int 0.02
+# Fix for Mac OS X Sierra:
+defaults write NSGlobalDomain KeyRepeat -float 0.000000000001
 ```
 
 ##### Set a short delay until keypressed => less is faster (don't put it under 7 or you won't be able to write properly):
